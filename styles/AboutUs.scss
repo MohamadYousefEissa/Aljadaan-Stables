@@ -1,0 +1,87 @@
+@use "./main" as *;
+%flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.about-us-two-horses {
+  width: 40vw;
+  height: 44vw;
+}
+
+.about-us-flex {
+  @extend %flex;
+  width: 90vw;
+  margin-top: 18vw;
+  margin-left: 5vw;
+  column-gap: 6vw;
+}
+.about-us-para {
+  font-size: 1.7vw;
+  // line-height: 1.9vw;
+  width: 40vw;
+  font-family: $p-font;
+}
+
+.about-us-flex2 {
+  @extend %flex;
+  width: 90vw;
+  margin-top: 5vw;
+  margin-left: 5vw;
+  column-gap: 6vw;
+}
+.about-us-horses {
+  width: 40vw;
+  height: 30.8vw;
+}
+.the {
+  font-size: 3vw;
+  color: $main-color;
+}
+@include responsive("mobile") {
+  .the {
+    font-size: 8vw;
+  }
+  .about-us-horses {
+    width: 80vw;
+    height: 55vw;
+  }
+  .about-us-flex2 {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 14vw;
+    width: 100vw;
+    row-gap: 4vw;
+  }
+  .about-us-para {
+    font-size: 5vw;
+    width: 80vw;
+  }
+  .about-us-flex {
+    flex-direction: column-reverse;
+    width: 100vw;
+    margin: 0;
+    margin-top: 2vw;
+    row-gap: 4vw;
+  }
+  .about-us-two-horses {
+    width: 80vw;
+    height: 100vw;
+    margin-top: 30vw;
+  }
+}
+@include responsive("tablet") {
+  .about-us-horses {
+    width: 45vw;
+    height: 35vw;
+  }
+  .about-us-para {
+    font-size: 2vw;
+    width: 45vw;
+  }
+  .about-us-two-horses {
+    width: 45vw;
+    height: 55vw;
+  }
+}

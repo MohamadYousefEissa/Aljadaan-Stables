@@ -1,0 +1,150 @@
+@use "./main" as *;
+
+nav {
+  position: absolute;
+}
+
+.nav-span a:hover,
+.nav-span a:focus {
+  color: $secondry-color;
+}
+.home-background-desktop {
+  width: 100vw;
+  height: 56.25vw;
+
+  @include responsive("tablet&mobile") {
+    margin-top: 5.5rem;
+  }
+}
+.bg-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2vw;
+  font-size: 8vw;
+  position: absolute;
+  width: 100vw;
+  margin-top: -38vw;
+  font-family: $h1-font;
+  cursor: default;
+  color: white;
+  letter-spacing: 0.5vw;
+}
+.bg-title div:nth-child(odd) {
+  margin-top: 1vw;
+  font-family: serif;
+  letter-spacing: normal;
+  font-size: 4vw;
+}
+.bg-title-stables {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  font-size: 7vw;
+  letter-spacing: 0.4vw;
+  position: absolute;
+  margin-top: -27.5vw;
+  font-family: $h1-font;
+  background: linear-gradient(#f9d8b9, #efb784);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+}
+
+.horse-icon-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  margin-top: -7.6vw;
+}
+.horse-icon-cont img {
+  width: 7.5vw;
+  height: 7.5vw;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+  margin-top: 2vw;
+}
+
+.wwa {
+  width: 5vw;
+  height: 44.45vw;
+  background: $main-color;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+}
+.wwa-title {
+  color: black;
+  font-family: $h1-font;
+  font-size: 6vw;
+  transform: rotate(-90deg);
+  position: absolute;
+  margin-left: -15.8vw;
+  cursor: default;
+}
+.home-horse {
+  width: 26.7vw;
+  height: 44.45vw;
+}
+.the {
+  font-size: 3vw;
+  color: $secondry-color;
+}
+.home-para {
+  width: 34.95vw;
+  margin-right: 6vw;
+}
+.home-para p {
+  font-size: 1.57vw;
+  font-weight: 500;
+  color: black;
+  font-family: $p-font;
+}
+.home-para a {
+  color: $secondry-color;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.home-para a:hover {
+  color: $main-color;
+}
+@include responsive("mobile") {
+  .home-content {
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 2rem;
+  }
+  .home-para {
+    order: 1;
+    width: 85vw;
+    margin-left: 8vw;
+    margin-top: 5vw;
+    p {
+      font-size: 5vw;
+      line-height: 6.1vw;
+    }
+  }
+  .wwa {
+    width: 12vw;
+    height: 96.3vw;
+  }
+  .wwa-title {
+    font-size: 14vw;
+    margin-left: -37vw;
+  }
+  .the {
+    font-size: 8vw;
+  }
+  .home-horse {
+    width: 57.8vw;
+    height: 96.3vw;
+  }
+}

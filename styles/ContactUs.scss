@@ -1,0 +1,141 @@
+@use "./main" as *;
+nav {
+  margin-bottom: 6vw;
+}
+body {
+  background: rgb(0, 0, 0);
+}
+.contacts-back {
+  position: fixed;
+  width: 40vw;
+  height: 90vh;
+  z-index: -999;
+  margin-top: -6vw;
+}
+.contacts-h1 {
+  font-size: 3vw;
+  font-family: $h1-font;
+  color: $main-color;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.decor {
+  width: 36vw;
+  height: 6vw;
+  margin-top: 1vw;
+  margin-bottom: 4vw;
+}
+.mail-div {
+  flex-direction: row-reverse;
+  a {
+    transition: all 0.2s ease;
+  }
+}
+.mail-div svg {
+  margin-right: 10vw;
+  fill: white;
+  transition: all 0.2s ease;
+}
+.mail-div:nth-of-type(1) svg {
+  position: relative;
+  top: 0.5vw;
+  left: 0.2vw;
+}
+.mail-div a:hover ~ svg {
+  fill: $main-color;
+}
+.mail-div a:hover {
+  color: $main-color;
+}
+
+.mail {
+  color: white;
+  font-size: 3vw;
+  font-family: $h1-font;
+  text-underline-offset: 5px;
+}
+
+.contacts-para {
+  font-size: 3vw;
+  color: white;
+  text-decoration: none;
+  font-family: $h1-font;
+}
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 18vw;
+  row-gap: 10vw;
+  padding-bottom: 12vw;
+}
+
+@include responsive("mobile") {
+  .mail-div:nth-of-type(2) {
+    margin-top: 4vw;
+  }
+  .mail,
+  .contacts-para {
+    font-size: 5vw;
+    text-underline-offset: 3px;
+  }
+  .contacts-content {
+    margin-left: 10vw;
+    margin-top: 10vw;
+    svg {
+      width: 10vw;
+    }
+  }
+  .decor {
+    width: 74vw;
+    height: 15vw;
+    margin-top: 0;
+  }
+  .contacts-h1 {
+    margin-top: 8rem;
+    margin-bottom: 2vw;
+    font-size: 7.5vw;
+  }
+  .contacts-back {
+    height: calc(100dvh - 95px);
+    width: 100vw;
+    margin-top: 95px;
+  }
+}
+@include responsive("tablet") {
+  .contacts-h1 {
+    margin-top: 16vw;
+    font-size: 5vw;
+  }
+  .decor {
+    width: 54vw;
+    height: 15vw;
+    margin-top: 0;
+  }
+  .contacts-back {
+    height: 80vw;
+    width: 60vw;
+    margin-top: 6vw;
+  }
+  .contacts-content svg {
+    width: 6vw;
+  }
+  .mail {
+    text-underline-offset: 4px;
+  }
+}
+@include responsive("ipad") {
+  .contacts-back {
+    height: 60vh;
+  }
+  .contacts-h1 {
+    margin-top: -10vw;
+  }
+  .decor {
+    margin-top: -3vw;
+  }
+  .contacts-content {
+    margin-top: 20vw;
+  }
+}

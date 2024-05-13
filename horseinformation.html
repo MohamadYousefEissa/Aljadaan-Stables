@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" type="png" href="./images/polygon logo.svg" />
+    <title>AL-Jaddan Stables</title>
+
+    <link rel="stylesheet" href="./styles/HorseInspect.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
+    />
+  </head>
+  <body>
+    <title2 class="hide">horseinformation</title2>
+
+    <!-- navigations bar -->
+    <nav></nav>
+    <div class="mobile-nav-cont"></div>
+    <div class="load-page visible">
+      <img src="./images/polygon logo.svg" alt="" />
+      <div>Loading page &VeryThinSpace;<span class="dot"></span></div>
+    </div>
+    <script>
+      const dot = document.querySelector(".dot");
+      let dotInterval = setInterval(() => {
+        dot.innerText += ".";
+        if (dot.innerText.length === 4) dot.innerText = "";
+      }, 500);
+    </script>
+
+    <div style="display: flex; flex-direction: column">
+      <!--horse name-->
+      <div><h1 class="inf-main-name">Horse</h1></div>
+      <!-- end of horse name-->
+      <div style="display: flex; justify-content: center">
+        <img src="./images/line.svg" class="inf-line" alt="line" />
+      </div>
+      <!--horse photos-->
+      <div>
+        <div class="f-carousel" id="myCarousel">
+          <!--photo 1-->
+          <a
+            class="f-carousel__slide"
+            data-fancybox="gallery"
+            href="./images/des1.jpg"
+          >
+            <img class="inf-main-img" src="./images/des1.jpg" alt="horse" />
+          </a>
+          <!--end of photo 1-->
+          <a
+            class="f-carousel__slide"
+            data-fancybox="gallery"
+            href="./images/des2.jpg"
+          >
+            <img class="inf-main-img" src="./images/des2.jpg" alt="horse" />
+          </a>
+          <a
+            class="f-carousel__slide"
+            data-fancybox="gallery"
+            href="./images/des3.jpg"
+          >
+            <img class="inf-main-img" src="./images/des3.jpg" alt="horse" />
+          </a>
+        </div>
+      </div>
+      <!-- end of horse photos-->
+
+      <div style="display: flex; justify-content: center">
+        <img
+          src="./images/line.svg"
+          class="inf-line"
+          style="transform: rotate(180deg)"
+          alt="line"
+        />
+      </div>
+    </div>
+    <div class="inf-rewards">
+      <!--rewards-->
+
+      <ul>
+        2014
+        <li>Rewards</li>
+      </ul>
+      <ul>
+        2016
+        <li>Rewards 1</li>
+        <li>Rewards 2</li>
+      </ul>
+      <ul>
+        2018
+        <li>Rewards 1</li>
+        <li>Rewards 2</li>
+        <li>Rewards 3</li>
+      </ul>
+      <!-- end of rewards-->
+    </div>
+    <div class="pedigree">
+      <div class="flex-center">
+        <h2>PEDIGREE</h2>
+        <img src="./images/inf-decor.webp" class="inf-decor" alt="decor" />
+      </div>
+      <div class="pedigree-flex">
+        <!--horse pedigree-->
+        <div class="inf-column">
+          <h1>Mares 1</h1>
+          <h1 class="stallions">Stallions 1</h1>
+        </div>
+        <div class="inf-column">
+          <h1>Mares 2</h1>
+          <h1 class="stallions">Stallions 2</h1>
+          <h1>Mares 3</h1>
+          <h1 class="stallions">Stallions 3</h1>
+        </div>
+        <div class="inf-column">
+          <h1>Mares 4</h1>
+          <h1 class="stallions">Stallions 4</h1>
+          <h1>Mares 5</h1>
+          <h1 class="stallions">Stallions 5</h1>
+          <h1>Mares 6</h1>
+          <h1 class="stallions">Stallions 6</h1>
+          <h1>Mares 7</h1>
+          <h1 class="stallions">Stallions 7</h1>
+        </div>
+        <!-- end of horse pedigree-->
+      </div>
+    </div>
+
+    <div style="margin-top: 10vh" class="flex-center">
+      <h2>OFFSPRINGS</h2>
+      <img src="./images/inf-decor.webp" class="inf-decor" alt="decor" />
+    </div>
+    <div class="inf-four-container">
+      <!--horse container-->
+      <div>
+        <div class="offsprings-frame">
+          <img class="inf-horse" src="./images/thumb1.jpg" />
+        </div>
+        <h3 class="inf-horse-name">Horse</h3>
+        <h3 class="inf-horse-feature">Royal x Fast</h3>
+      </div>
+      <!-- end of horse container-->
+      <div>
+        <div class="offsprings-frame">
+          <img class="inf-horse" src="./images/thumb4.jpg" />
+        </div>
+        <h3 class="inf-horse-name">Horse</h3>
+        <h3 class="inf-horse-feature">Royal x Fast</h3>
+      </div>
+      <div>
+        <div class="offsprings-frame">
+          <img class="inf-horse" src="./images/thumb2.jpg" />
+        </div>
+        <h3 class="inf-horse-name">Horse</h3>
+        <h3 class="inf-horse-feature">Royal x Fast</h3>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&family=Montserrat&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/navigationbar.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>
